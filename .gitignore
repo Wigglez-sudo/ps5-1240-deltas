@@ -1,0 +1,7 @@
+*.o
+*.bin
+*.elf
+bin/
+shellcode_hv/shellcode_hv.h
+shellcode_kernel/shellcode_kernel.h
+shellcode_ap/shellcode_ap.h
