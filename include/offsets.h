@@ -77,5 +77,6 @@ typedef struct _offset_list {
 } offset_list;
 
 extern offset_list off_1360;
+extern offset_list off_1240;
 
 #endif
