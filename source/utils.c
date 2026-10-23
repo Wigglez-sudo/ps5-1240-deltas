@@ -59,7 +59,7 @@ int setup_env(void) {
          "to boot Linux on sleep resume.\n");
 
 #ifndef PS5_BUILD_TAG
-#define PS5_BUILD_TAG "12xx-1220-1240-1260-1270"
+#define PS5_BUILD_TAG "12xx-1200-1202-1220-1240-1260-1270"
 #endif
   notify("build: " PS5_BUILD_TAG);
   notify("fw raw: 0x%x (shifted 0x%x)\n",
@@ -81,6 +81,12 @@ int set_offsets(void) {
   if (fw == 0)
     return -1;
   switch (fw) {
+  case 0x1200:
+    env_offset = off_1200;
+    break;
+  case 0x1202:
+    env_offset = off_1202;
+    break;
   case 0x1220:
   case 0x1240:
     env_offset = off_1240;
